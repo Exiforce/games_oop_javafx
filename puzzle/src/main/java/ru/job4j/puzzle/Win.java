@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class Win {
     public static boolean check(int[][] board) {
         boolean result = false;
-        for (int row = 0; row < board.length; row++) {
-            if (board[row][row] == 1 && (monoHorizontal(board, row)
-                        || monoVertical(board, row))) {
+        for (int diagonal = 0; diagonal < board.length; diagonal++) {
+            if (board[diagonal][diagonal] == 1 && (monoHorizontal(board, diagonal)
+                        || monoVertical(board, diagonal))) {
                 result = true;
                 break;
             }
